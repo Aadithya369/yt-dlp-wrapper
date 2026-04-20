@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <sys/stat.h>
 #include <unistd.h>
 int main() {
   char link[1000];
   char command[2000];
   char file_name[200];
-  snprintf(file_name, sizeof(file_name),
-           "/home/aadithya/Desktop/side_projects/youtube_to_mp3/link.txt");
+  snprintf(file_name, sizeof(file_name), "./links.txt");
   FILE *file = fopen(file_name, "r+");
   if (file == NULL) {
     perror("File cant be opened");
